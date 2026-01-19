@@ -5,62 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ya Taj Hotel & Family Restaurant</title>
     <style>
-        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0a0a0a; color: white; text-align: center; }
+        body { margin: 0; font-family: 'Arial', sans-serif; background-color: #000; color: white; text-align: center; }
         
-        /* Premium Header */
-        header { padding: 30px 20px; border-bottom: 2px solid #D4AF37; background: linear-gradient(to bottom, #1a1a1a, #000); }
+        /* Header & Logo Fix */
+        header { padding: 30px 20px; border-bottom: 2px solid #D4AF37; }
         .logo-circle {
-            width: 100px; height: 100px; border: 3px solid #D4AF37;
+            width: 130px; height: 130px; border: 3px solid #D4AF37;
             border-radius: 50%; margin: 0 auto 15px;
-            background: #000; overflow: hidden;
+            background: #1a1a1a; overflow: hidden;
             display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
         }
-        /* Icon placeholder for Logo */
-        .logo-circle span { color: #D4AF37; font-size: 40px; }
+        /* Profile Photo Fix */
+        .logo-circle img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-        h1 { color: #D4AF37; margin: 5px 0; font-size: 24px; text-transform: uppercase; letter-spacing: 2px; }
-        .sub-title { color: #aaa; font-size: 14px; margin-bottom: 10px; font-weight: 300; }
+        h1 { color: #D4AF37; margin: 5px 0; font-size: 24px; text-transform: uppercase; }
+        .sub-title { color: #888; font-size: 16px; margin-bottom: 10px; }
 
-        /* Contact Card */
+        /* Contact Section */
         .contact-card {
-            background: linear-gradient(135deg, #D4AF37, #B8860B); color: black;
-            padding: 25px 15px; border-radius: 20px;
-            margin: 20px auto; max-width: 380px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            background: #c5a059; color: black;
+            padding: 25px; border-radius: 20px;
+            margin: 20px auto; max-width: 400px;
         }
-        .phone-display { font-size: 30px; font-weight: 900; display: block; margin-bottom: 15px; letter-spacing: 1px; }
+        .phone-display { font-size: 32px; font-weight: 900; display: block; margin-bottom: 20px; }
         
         .action-btns { display: flex; gap: 10px; justify-content: center; }
         .btn {
-            flex: 1; padding: 14px; border-radius: 12px; text-decoration: none;
+            flex: 1; padding: 12px; border-radius: 12px; text-decoration: none;
             font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px;
-            font-size: 15px; transition: 0.3s;
         }
-        .btn-call { background: white; color: black; border: 1px solid #ddd; }
+        .btn-call { background: white; color: black; }
         .btn-wa { background: #25D366; color: white; }
 
-        /* Menu Gallery with Internet Images */
-        .gallery-title { color: #D4AF37; font-size: 20px; margin: 30px 0 15px; font-weight: bold; text-transform: uppercase; }
-        .gallery-container { padding: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; max-width: 500px; margin: auto; }
-        .food-item { background: #1a1a1a; border-radius: 15px; overflow: hidden; border: 1px solid #333; transition: 0.3s; }
-        .food-item:active { transform: scale(0.95); }
-        
-        /* High Quality Photos from Internet */
+        /* Gallery Fix */
+        .gallery-container { padding: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; max-width: 500px; margin: auto; }
+        .food-item { background: #1a1a1a; border-radius: 15px; overflow: hidden; border: 1px solid #333; }
         .food-item img { width: 100%; height: 140px; object-fit: cover; display: block; }
         
-        .details { padding: 12px; text-align: left; }
-        .name { font-size: 13px; font-weight: bold; color: #fff; display: block; margin-bottom: 5px; height: 35px; overflow: hidden; }
-        .price { color: #D4AF37; font-weight: bold; font-size: 16px; }
+        .details { padding: 10px; text-align: left; }
+        .name { font-size: 13px; font-weight: bold; color: #fff; display: block; margin-bottom: 4px; }
+        .price { color: #D4AF37; font-weight: bold; font-size: 15px; }
 
-        footer { padding: 40px; color: #555; font-size: 12px; border-top: 1px solid #222; margin-top: 30px; }
+        footer { padding: 30px; color: #444; font-size: 12px; border-top: 1px solid #222; margin-top: 20px; }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo-circle">
-        <span>🕌</span> </div>
+        <img src="1000221827.jpg" alt="Logo">
+    </div>
     <h1>YA TAJ HOTEL</h1>
     <div class="sub-title">Hotel & Family Restaurant</div>
 </header>
@@ -73,46 +68,46 @@
     </div>
 </div>
 
-<div class="gallery-title">Our Specials</div>
+<h3 style="color:#D4AF37;">Our Specialties</h3>
 
 <div class="gallery-container">
     <div class="food-item">
-        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=400" alt="Paneer Manchurian">
+        <img src="1000221821.jpg" alt="Paneer Manchurian">
         <div class="details">
             <span class="name">Paneer Manchurian</span>
             <span class="price">190/-</span>
         </div>
     </div>
     <div class="food-item">
-        <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=400" alt="Veg Bullet">
+        <img src="1000221823.jpg" alt="Veg Bullet">
         <div class="details">
             <span class="name">Veg Bullet Special</span>
             <span class="price">270/-</span>
         </div>
     </div>
     <div class="food-item">
-        <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=400" alt="Manchurian Gravy">
+        <img src="1000221836.jpg" alt="Manchurian Gravy">
         <div class="details">
             <span class="name">Manchurian Gravy</span>
             <span class="price">190/-</span>
         </div>
     </div>
     <div class="food-item">
-        <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=400" alt="Paneer Tikka">
+        <img src="1000221842.png" alt="Paneer Tikka">
         <div class="details">
-            <span class="name">Paneer Tikka Special</span>
+            <span class="name">Paneer Tikka</span>
             <span class="price">210/-</span>
         </div>
     </div>
     <div class="food-item">
-        <img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce7d?auto=format&fit=crop&w=400" alt="Paneer Chilli">
+        <img src="1000221838.jpg" alt="Paneer Chilli">
         <div class="details">
             <span class="name">Paneer Chilli Special</span>
             <span class="price">220/-</span>
         </div>
     </div>
     <div class="food-item">
-        <img src="https://images.unsplash.com/photo-1567337710282-00832b415979?auto=format&fit=crop&w=400" alt="Crispy Paneer">
+        <img src="1000221844.jpg" alt="Crispy Paneer">
         <div class="details">
             <span class="name">Crispy Paneer</span>
             <span class="price">240/-</span>
@@ -121,8 +116,7 @@
 </div>
 
 <footer>
-    © 2026 YA TAJ HOTEL & FAMILY RESTAURANT<br>
-    Quality Food | Best Service
+    © 2026 YA TAJ HOTEL & FAMILY RESTAURANT
 </footer>
 
 </body>
