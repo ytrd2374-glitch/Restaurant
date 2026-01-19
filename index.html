@@ -12,55 +12,42 @@
             --vip-card: #c5a059;
         }
         body { margin: 0; font-family: 'Arial', sans-serif; background-color: var(--dark-bg); color: white; text-align: center; }
-        
-        /* Premium Header & Logo */
         header { padding: 40px 20px; border-bottom: 2px solid var(--gold); }
         .logo-circle {
-            width: 130px; height: 130px; border: 3px solid var(--gold);
+            width: 120px; height: 120px; border: 3px solid var(--gold);
             border-radius: 50%; margin: 0 auto 15px;
             display: flex; align-items: center; justify-content: center;
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
             background: #000; overflow: hidden;
         }
         .logo-circle img { width: 100%; height: 100%; object-fit: cover; }
-        h1 { color: var(--gold); margin: 5px 0; font-size: 24px; letter-spacing: 2px; }
+        h1 { color: var(--gold); margin: 5px 0; font-size: 22px; letter-spacing: 2px; }
         .sub-header { color: #888; font-size: 14px; margin-bottom: 20px; }
 
-        /* Navigation Style from Photo */
-        nav { display: flex; justify-content: center; gap: 30px; padding: 15px 0; border-top: 1px solid #333; }
-        nav span { color: var(--gold); font-weight: bold; border-bottom: 2px solid var(--gold); padding-bottom: 5px; cursor: pointer; }
-        nav span.inactive { color: #888; border-bottom: none; }
-
-        /* VIP Dining Card */
-        .container { padding: 20px; max-width: 450px; margin: auto; }
+        .container { padding: 20px; max-width: 600px; margin: auto; }
         .vip-card {
             background: var(--vip-card); color: black;
-            padding: 30px 20px; border-radius: 25px;
+            padding: 25px 15px; border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        .vip-card h2 { margin: 0; font-size: 22px; }
-        .phone { font-size: 32px; font-weight: 900; margin: 15px 0; display: block; }
+        .phone { font-size: 28px; font-weight: 900; margin: 10px 0; display: block; }
         
-        /* Action Buttons Side by Side */
-        .btn-group { display: flex; gap: 10px; margin-top: 20px; }
+        .btn-group { display: flex; gap: 10px; margin-top: 15px; }
         .btn {
-            flex: 1; padding: 15px; border-radius: 15px; text-decoration: none;
-            font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px;
+            flex: 1; padding: 12px; border-radius: 10px; text-decoration: none;
+            font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 5px;
         }
         .btn-call { background: white; color: black; }
         .btn-wa { background: #25D366; color: white; }
 
-        /* Food Gallery & Menu */
-        .menu-section { margin-top: 30px; background: var(--card-bg); border-radius: 20px; overflow: hidden; text-align: left; }
-        .food-img { width: 100%; height: 220px; object-fit: cover; border-bottom: 2px solid var(--gold); }
-        .menu-data { padding: 20px; }
-        .menu-title { color: var(--gold); font-size: 18px; font-weight: bold; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 15px; text-align: center; }
-        
-        .menu-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #2a2a2a; }
-        .item-name { font-size: 15px; }
-        .price-wrap { display: flex; gap: 20px; text-align: center; }
-        .p-label { font-size: 9px; color: #777; text-transform: uppercase; display: block; }
-        .p-val { color: var(--gold); font-weight: bold; font-size: 16px; }
+        /* Food Gallery Grid */
+        .gallery-title { color: var(--gold); font-size: 20px; margin: 30px 0 15px; font-weight: bold; }
+        .food-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; }
+        .food-card { background: var(--card-bg); border-radius: 15px; overflow: hidden; border: 1px solid #333; }
+        .food-card img { width: 100%; height: 140px; object-fit: cover; }
+        .food-info { padding: 10px; text-align: left; }
+        .food-name { display: block; font-size: 13px; font-weight: bold; color: #eee; margin-bottom: 5px; }
+        .food-price { color: var(--gold); font-weight: bold; font-size: 15px; }
 
         footer { padding: 40px; color: #444; font-size: 12px; }
     </style>
@@ -72,58 +59,61 @@
         <img src="1000221827.jpg" alt="Ya Taj Hotel">
     </div>
     <h1>YA TAJ HOTEL</h1>
-    <div class="sub-header">Hotel & Family Restaurant</div> </header>
-
-<nav>
-    <span>HOME</span>
-    <span class="inactive">MENU</span>
-    <span class="inactive">CONTACT</span>
-</nav>
+    <div class="sub-header">Hotel & Family Restaurant</div>
+</header>
 
 <div class="container">
     <div class="vip-card">
-        <h2>Welcome to VIP Dining</h2>
-        <span class="phone">9373305607</span> <div class="btn-group">
+        <h2 style="margin:0; font-size:18px;">Welcome to VIP Dining</h2>
+        <span class="phone">9373305607</span>
+        <div class="btn-group">
             <a href="tel:+919373305607" class="btn btn-call">📞 Call Now</a>
             <a href="https://wa.me/919373305607" class="btn btn-wa">💬 WhatsApp</a>
         </div>
     </div>
 
-    <div class="menu-section">
-        <img src="1000221829.jpg" class="food-img" alt="Chicken Tandoori">
-        <div class="menu-data">
-            <div class="menu-title">CHICKEN TANDOORI SPECIALS</div>
-            
-            <div class="menu-item">
-                <span class="item-name">Chicken Tandoori</span>
-                <div class="price-wrap">
-                    <div><span class="p-label">Half</span><span class="p-val">180/-</span></div>
-                    <div><span class="p-label">Full</span><span class="p-val">350/-</span></div>
-                </div>
+    <div class="gallery-title">Food Gallery</div>
+    <div class="food-grid">
+        <div class="food-card">
+            <img src="1000221821.jpg" alt="Dish 1">
+            <div class="food-info">
+                <span class="food-name">Paneer Manchurian</span>
+                <span class="food-price">190/-</span>
             </div>
-
-            <div class="menu-item">
-                <span class="item-name">Chicken Tangdi Kebab</span>
-                <div class="price-wrap">
-                    <div><span class="p-label">Half</span><span class="p-val">180/-</span></div>
-                    <div><span class="p-label">Full</span><span class="p-val">350/-</span></div>
-                </div>
+        </div>
+        <div class="food-card">
+            <img src="1000221823.jpg" alt="Dish 2">
+            <div class="food-info">
+                <span class="food-name">Veg Bullet Special</span>
+                <span class="food-price">270/-</span>
             </div>
-
-            <div class="menu-item">
-                <span class="item-name">Chicken Special Tandoori</span>
-                <div class="price-wrap">
-                    <div><span class="p-label">Half</span><span class="p-val">200/-</span></div>
-                    <div><span class="p-label">Full</span><span class="p-val">380/-</span></div>
-                </div>
+        </div>
+        <div class="food-card">
+            <img src="1000221836.jpg" alt="Dish 3">
+            <div class="food-info">
+                <span class="food-name">Manchurian Gravy</span>
+                <span class="food-price">190/-</span>
             </div>
-
-            <div class="menu-item">
-                <span class="item-name">Chicken Afghani Tandoori</span>
-                <div class="price-wrap">
-                    <div><span class="p-label">Half</span><span class="p-val">200/-</span></div>
-                    <div><span class="p-label">Full</span><span class="p-val">380/-</span></div>
-                </div>
+        </div>
+        <div class="food-card">
+            <img src="1000221842.png" alt="Dish 4">
+            <div class="food-info">
+                <span class="food-name">Paneer Tikka</span>
+                <span class="food-price">210/-</span>
+            </div>
+        </div>
+        <div class="food-card">
+            <img src="1000221838.jpg" alt="Dish 5">
+            <div class="food-info">
+                <span class="food-name">Paneer Chilli Special</span>
+                <span class="food-price">220/-</span>
+            </div>
+        </div>
+        <div class="food-card">
+            <img src="1000221844.jpg" alt="Dish 6">
+            <div class="food-info">
+                <span class="food-name">Crispy Paneer</span>
+                <span class="food-price">240/-</span>
             </div>
         </div>
     </div>
