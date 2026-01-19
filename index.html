@@ -1,140 +1,137 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ya Taj Hotel & Family Restaurant</title>
-<style>
-    :root { 
-        --gold: #D4AF37; 
-        --dark-bg: #0a0a0a; 
-        --card-bg: #1a1a1a;
-        --white: #ffffff;
-    }
-    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--dark-bg); color: var(--white); }
-    
-    /* Header with Actual Logo from Photo */
-    header { 
-        background: linear-gradient(180deg, #000 0%, #1a1a1a 100%);
-        text-align: center; padding: 40px 20px;
-        border-bottom: 3px solid var(--gold);
-    }
-    .logo-frame {
-        width: 120px; height: 120px; border: 3px solid var(--gold);
-        border-radius: 50%; margin: 0 auto 15px;
-        display: flex; align-items: center; justify-content: center;
-        box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
-        background: #000; overflow: hidden;
-    }
-    .logo-frame img { width: 100%; height: 100%; object-fit: cover; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ya Taj Hotel & Family Restaurant</title>
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark-bg: #000000;
+            --card-bg: #1a1a1a;
+            --vip-card: #c5a059;
+        }
+        body { margin: 0; font-family: 'Arial', sans-serif; background-color: var(--dark-bg); color: white; text-align: center; }
+        
+        /* Premium Header & Logo */
+        header { padding: 40px 20px; border-bottom: 2px solid var(--gold); }
+        .logo-circle {
+            width: 130px; height: 130px; border: 3px solid var(--gold);
+            border-radius: 50%; margin: 0 auto 15px;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            background: #000; overflow: hidden;
+        }
+        .logo-circle img { width: 100%; height: 100%; object-fit: cover; }
+        h1 { color: var(--gold); margin: 5px 0; font-size: 24px; letter-spacing: 2px; }
+        .sub-header { color: #888; font-size: 14px; margin-bottom: 20px; }
 
-    header h1 { margin: 0; color: var(--gold); font-size: 1.8rem; text-transform: uppercase; letter-spacing: 1px; }
-    header p { color: #888; font-size: 1rem; margin-top: 5px; }
+        /* Navigation Style from Photo */
+        nav { display: flex; justify-content: center; gap: 30px; padding: 15px 0; border-top: 1px solid #333; }
+        nav span { color: var(--gold); font-weight: bold; border-bottom: 2px solid var(--gold); padding-bottom: 5px; cursor: pointer; }
+        nav span.inactive { color: #888; border-bottom: none; }
 
-    section { max-width: 500px; margin: auto; padding: 20px; }
+        /* VIP Dining Card */
+        .container { padding: 20px; max-width: 450px; margin: auto; }
+        .vip-card {
+            background: var(--vip-card); color: black;
+            padding: 30px 20px; border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .vip-card h2 { margin: 0; font-size: 22px; }
+        .phone { font-size: 32px; font-weight: 900; margin: 15px 0; display: block; }
+        
+        /* Action Buttons Side by Side */
+        .btn-group { display: flex; gap: 10px; margin-top: 20px; }
+        .btn {
+            flex: 1; padding: 15px; border-radius: 15px; text-decoration: none;
+            font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        .btn-call { background: white; color: black; }
+        .btn-wa { background: #25D366; color: white; }
 
-    /* VIP Contact Card */
-    .vip-card {
-        background: linear-gradient(145deg, #c5a059, #8e6d2f);
-        color: #000; padding: 25px; border-radius: 20px; text-align: center;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 25px;
-    }
-    .vip-card h2 { margin: 0; font-size: 1.4rem; font-weight: 700; }
-    .phone-number { font-size: 2.2rem; font-weight: 900; margin: 10px 0; display: block; letter-spacing: 1px; }
+        /* Food Gallery & Menu */
+        .menu-section { margin-top: 30px; background: var(--card-bg); border-radius: 20px; overflow: hidden; text-align: left; }
+        .food-img { width: 100%; height: 220px; object-fit: cover; border-bottom: 2px solid var(--gold); }
+        .menu-data { padding: 20px; }
+        .menu-title { color: var(--gold); font-size: 18px; font-weight: bold; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 15px; text-align: center; }
+        
+        .menu-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #2a2a2a; }
+        .item-name { font-size: 15px; }
+        .price-wrap { display: flex; gap: 20px; text-align: center; }
+        .p-label { font-size: 9px; color: #777; text-transform: uppercase; display: block; }
+        .p-val { color: var(--gold); font-weight: bold; font-size: 16px; }
 
-    /* Buttons Side by Side */
-    .action-group { display: flex; gap: 10px; }
-    .btn { 
-        flex: 1; text-decoration: none; padding: 15px; border-radius: 12px; 
-        font-weight: bold; text-align: center; font-size: 0.9rem;
-        display: flex; align-items: center; justify-content: center; gap: 8px;
-    }
-    .btn-call { background: var(--white); color: #000; }
-    .btn-wa { background: #25D366; color: #fff; }
-
-    /* Food Photo & Menu Section */
-    .food-display {
-        background: var(--card-bg); border-radius: 20px; overflow: hidden;
-        border: 1px solid #333; margin-top: 20px;
-    }
-    .food-img { width: 100%; height: 250px; object-fit: cover; border-bottom: 2px solid var(--gold); }
-    
-    .menu-content { padding: 20px; }
-    .menu-header { color: var(--gold); text-align: center; margin-bottom: 15px; font-size: 1.3rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
-    
-    .menu-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #2a2a2a; }
-    .item-name { font-weight: 500; color: #eee; font-size: 0.95rem; }
-    .price-group { display: flex; gap: 15px; text-align: center; }
-    .price-box { display: flex; flex-direction: column; }
-    .p-label { font-size: 0.6rem; color: #777; text-transform: uppercase; }
-    .p-amt { color: var(--gold); font-weight: 700; font-size: 1rem; }
-
-    footer { text-align: center; padding: 40px 20px; color: #444; font-size: 0.8rem; }
-</style>
+        footer { padding: 40px; color: #444; font-size: 12px; }
+    </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-frame">
-        <img src="1000221827.jpg" alt="Ya Taj Hotel Logo">
+    <div class="logo-circle">
+        <img src="1000221827.jpg" alt="Ya Taj Hotel">
     </div>
     <h1>YA TAJ HOTEL</h1>
-    <p>Hotel & Family Restaurant</p> </header>
+    <div class="sub-header">Hotel & Family Restaurant</div> </header>
 
-<section>
+<nav>
+    <span>HOME</span>
+    <span class="inactive">MENU</span>
+    <span class="inactive">CONTACT</span>
+</nav>
+
+<div class="container">
     <div class="vip-card">
         <h2>Welcome to VIP Dining</h2>
-        <span class="phone-number">9373305607</span>
-        
-        <div class="action-group">
+        <span class="phone">9373305607</span> <div class="btn-group">
             <a href="tel:+919373305607" class="btn btn-call">📞 Call Now</a>
             <a href="https://wa.me/919373305607" class="btn btn-wa">💬 WhatsApp</a>
         </div>
     </div>
 
-    <div class="food-display">
+    <div class="menu-section">
         <img src="1000221829.jpg" class="food-img" alt="Chicken Tandoori">
-        <div class="menu-content">
-            <h3 class="menu-header">CHICKEN TANDOORI SPECIALS</h3>
+        <div class="menu-data">
+            <div class="menu-title">CHICKEN TANDOORI SPECIALS</div>
             
             <div class="menu-item">
                 <span class="item-name">Chicken Tandoori</span>
-                <div class="price-group">
-                    <div class="price-box"><span class="p-label">Half</span><span class="p-amt">180/-</span></div>
-                    <div class="price-box"><span class="p-label">Full</span><span class="p-amt">350/-</span></div>
+                <div class="price-wrap">
+                    <div><span class="p-label">Half</span><span class="p-val">180/-</span></div>
+                    <div><span class="p-label">Full</span><span class="p-val">350/-</span></div>
                 </div>
             </div>
 
             <div class="menu-item">
                 <span class="item-name">Chicken Tangdi Kebab</span>
-                <div class="price-group">
-                    <div class="price-box"><span class="p-label">Half</span><span class="p-amt">180/-</span></div>
-                    <div class="price-box"><span class="p-label">Full</span><span class="p-amt">350/-</span></div>
+                <div class="price-wrap">
+                    <div><span class="p-label">Half</span><span class="p-val">180/-</span></div>
+                    <div><span class="p-label">Full</span><span class="p-val">350/-</span></div>
                 </div>
             </div>
 
             <div class="menu-item">
                 <span class="item-name">Chicken Special Tandoori</span>
-                <div class="price-group">
-                    <div class="price-box"><span class="p-label">Half</span><span class="p-amt">200/-</span></div>
-                    <div class="price-box"><span class="p-label">Full</span><span class="p-amt">380/-</span></div>
+                <div class="price-wrap">
+                    <div><span class="p-label">Half</span><span class="p-val">200/-</span></div>
+                    <div><span class="p-label">Full</span><span class="p-val">380/-</span></div>
                 </div>
             </div>
 
             <div class="menu-item">
                 <span class="item-name">Chicken Afghani Tandoori</span>
-                <div class="price-group">
-                    <div class="price-box"><span class="p-label">Half</span><span class="p-amt">200/-</span></div>
-                    <div class="price-box"><span class="p-label">Full</span><span class="p-amt">380/-</span></div>
+                <div class="price-wrap">
+                    <div><span class="p-label">Half</span><span class="p-val">200/-</span></div>
+                    <div><span class="p-label">Full</span><span class="p-val">380/-</span></div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <footer>
     © 2026 YA TAJ HOTEL & FAMILY RESTAURANT<br>
-    Best Quality & Pure Taste
+    PREMIUM DIGITAL MENU EXPERIENCE
 </footer>
 
 </body>
