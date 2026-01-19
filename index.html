@@ -7,24 +7,26 @@
     <style>
         body { margin: 0; font-family: 'Arial', sans-serif; background-color: #000; color: white; text-align: center; }
         
-        /* Header & Logo */
+        /* Fixed Header & Logo Photo */
         header { padding: 30px 20px; border-bottom: 2px solid #D4AF37; }
         .logo-circle {
             width: 120px; height: 120px; border: 3px solid #D4AF37;
             border-radius: 50%; margin: 0 auto 15px;
             display: flex; align-items: center; justify-content: center;
-            background: #000; overflow: hidden;
+            background: #1a1a1a; overflow: hidden;
+            box-shadow: 0 0 15px #D4AF37;
         }
-        .logo-circle img { width: 100%; height: 100%; object-fit: cover; }
+        /* Logo Fix */
+        .logo-circle img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
         h1 { color: #D4AF37; margin: 5px 0; font-size: 24px; text-transform: uppercase; }
         .sub-title { color: #888; font-size: 16px; margin-bottom: 10px; }
 
-        /* Contact Section (No VIP Name) */
+        /* Contact Section */
         .contact-card {
             background: #c5a059; color: black;
             padding: 25px; border-radius: 20px;
             margin: 20px auto; max-width: 400px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
         }
         .phone-display { font-size: 32px; font-weight: 900; display: block; margin-bottom: 20px; }
         
@@ -32,15 +34,16 @@
         .btn {
             flex: 1; padding: 12px; border-radius: 12px; text-decoration: none;
             font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px;
-            font-size: 14px;
         }
         .btn-call { background: white; color: black; }
         .btn-wa { background: #25D366; color: white; }
 
-        /* Food Gallery */
+        /* Food Gallery Fix */
         .gallery-container { padding: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; max-width: 500px; margin: auto; }
         .food-item { background: #1a1a1a; border-radius: 15px; overflow: hidden; border: 1px solid #333; }
-        .food-item img { width: 100%; height: 130px; object-fit: cover; }
+        /* Photo Fix */
+        .food-item img { width: 100%; height: 130px; object-fit: cover; display: block; background: #222; }
+        
         .details { padding: 10px; text-align: left; }
         .name { font-size: 13px; font-weight: bold; color: #fff; display: block; margin-bottom: 4px; }
         .price { color: #D4AF37; font-weight: bold; font-size: 15px; }
@@ -52,12 +55,15 @@
 
 <header>
     <div class="logo-circle">
-        <img src="1000221827.jpg" alt="Logo"> </div>
+        <img src="1000221827.jpg" alt="Hotel Logo">
+    </div>
     <h1>YA TAJ HOTEL</h1>
-    <div class="sub-title">Hotel & Family Restaurant</div> </header>
+    <div class="sub-title">Hotel & Family Restaurant</div>
+</header>
 
 <div class="contact-card">
-    <span class="phone-display">9373305607</span> <div class="action-btns">
+    <span class="phone-display">9373305607</span>
+    <div class="action-btns">
         <a href="tel:+919373305607" class="btn btn-call">📞 Call Now</a>
         <a href="https://wa.me/919373305607" class="btn btn-wa">💬 WhatsApp</a>
     </div>
@@ -67,39 +73,45 @@
 
 <div class="gallery-container">
     <div class="food-item">
-        <img src="1000221821.jpg" alt="Dish 1"> <div class="details">
+        <img src="1000221821.jpg" alt="Paneer Manchurian">
+        <div class="details">
             <span class="name">Paneer Manchurian</span>
-            <span class="price">190/-</span>
+            <span class="price">fax/-</span>
         </div>
     </div>
     <div class="food-item">
-        <img src="1000221823.jpg" alt="Dish 2"> <div class="details">
+        <img src="1000221823.jpg" alt="Veg Bullet">
+        <div class="details">
             <span class="name">Veg Bullet Special</span>
-            <span class="price">270/-</span>
+            <span class="price">fax/-</span>
         </div>
     </div>
     <div class="food-item">
-        <img src="1000221836.jpg" alt="Dish 3"> <div class="details">
+        <img src="1000221836.jpg" alt="Manchurian Gravy">
+        <div class="details">
             <span class="name">Manchurian Gravy</span>
-            <span class="price">190/-</span>
+            <span class="price">fax/-</span>
         </div>
     </div>
     <div class="food-item">
-        <img src="1000221842.png" alt="Dish 4"> <div class="details">
+        <img src="1000221842.png" alt="Paneer Tikka">
+        <div class="details">
             <span class="name">Paneer Tikka</span>
-            <span class="price">210/-</span>
+            <span class="price">fax/-</span>
         </div>
     </div>
     <div class="food-item">
-        <img src="1000221838.jpg" alt="Dish 5"> <div class="details">
+        <img src="1000221838.jpg" alt="Paneer Chilli">
+        <div class="details">
             <span class="name">Paneer Chilli Special</span>
-            <span class="price">220/-</span>
+            <span class="price">fax/-</span>
         </div>
     </div>
     <div class="food-item">
-        <img src="1000221844.jpg" alt="Dish 6"> <div class="details">
+        <img src="1000221844.jpg" alt="Crispy Paneer">
+        <div class="details">
             <span class="name">Crispy Paneer</span>
-            <span class="price">240/-</span>
+            <span class="price">Fax/-</span>
         </div>
     </div>
 </div>
